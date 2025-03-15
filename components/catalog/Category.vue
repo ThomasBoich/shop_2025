@@ -90,4 +90,34 @@ const props = defineProps({
     margin: 0px 10px 0px 0px;
   }
 }
+.categoryCart.categoryCart img{
+  right: -25%;
+  bottom: -40%;
+}
+@media (max-width: 979px){
+  .popularCategories.popularCategories h2{
+    font-size: 25px!IMPORTANT;
+  }
+  .popularCategories.popularCategories h2{
+    font-size: 20px;
+  }
+  .categoryCart{
+    padding: 20px 20px 20px 20px;
+  }
+  .categoryCartList{
+    z-index: 2;
+  }
+  .categoryCart.categoryCart img{
+    bottom: -50%;
+    right: -50%;
+  }
+}
+
+@media (max-width: 679px){
+  .categoryCart{
+    width: 100%;
+    max-width: 100%;
+    margin: 12px 0px 0px 0px;
+  }
+}
 </style>

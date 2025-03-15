@@ -1,5 +1,5 @@
 <template>
-  <section class="w-100 p-125-0">
+  <section class="w-100 p-125-0 you-plans">
     <div class="content df fd-c">
 
       <div class="slider_info df jc-sb w-100 ai-c">
@@ -177,17 +177,17 @@ import { SfScrollable, SfButton, SfIconChevronLeft, SfIconChevronRight } from '@
 import { ref } from 'vue';
 
 const images = [
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack1' },
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack2' },
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack3' },
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack4' },
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack5' },
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack6' },
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack7' },
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack8' },
-  { imageSrc:'you_plan_item_img.png', alt: 'backpack9' },
-  { imageSrc: 'you_plan_item_img.png', alt: 'backpack10' },
-  { imageSrc: 'you_plan_item_img.png', alt: 'backpack11' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack1' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack2' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack3' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack4' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack5' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack6' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack7' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack8' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack9' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack10' },
+  { imageSrc:'/you_plan_item_img.png', alt: 'backpack11' },
 ];
 
 const activeIndex = ref(0);
@@ -307,5 +307,60 @@ form{
     width: -moz-max-content;
     width: max-content;
     margin: 25px auto auto auto;
+}
+
+@media (max-width: 979px){
+  .plan-info.plan-info h2{
+    font-size: 25px;
+  }
+  .plan-silder{
+    max-width: 379px;
+  }
+  .plan-info span{
+    font-size: 18px!IMPORTANT;
+  }
+  .plan-info.plan-info p{
+    font-size: 14px;
+  }
+  .you-plans{
+    padding: 50px 0px 50px 0px;
+  }
+
+  .you-plan-form-layer.you-plan-form-layer li{
+    font-size: 14px;
+  }
+
+  .li-title{
+    font-size: 20px!IMPORTANT;
+    margin: 0px 20px 0px 0px!IMPORTANT;
+  }
+  
+  .you-plan-form-layer{
+    padding: 30px 30px 30px 30px;
+  }
+  .slider_info{
+    margin: 0px 0px 50px 0px;
+  }  
+}
+@media (max-width: 679px){
+  .slider_info{
+    flex-direction: column;
+    margin: 0px 0px 50px 0px;
+  }
+
+  .plan-silder{
+    width: 100%;
+    max-width: 100%;
+    margin: 20px 0px 0px 0px;
+  }
+  .you-plan-form-layer{
+    flex-direction: column;
+  }
+
+  form{
+    margin: 20px 0px 0px 0px;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 </style>

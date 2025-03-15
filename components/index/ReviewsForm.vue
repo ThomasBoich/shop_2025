@@ -304,9 +304,9 @@
         Предоставим цену ниже до 2 раз импортного при том же качестве 
 
       </disc>
-        
+        <index style="z-index: 4;">
         или предложим отечественный аналог с лучшими показателями
-
+        </index>
         <button>
           Подобрать аналог 
           <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -372,6 +372,7 @@
   justify-content: space-between;
   margin: 0px 0px 0px 0px;
   padding: 0px 0px 0px 25px;
+  gap: 5%;
 }
 .selection_analogue_two:first-child{
   margin: 0px 0px 0px 0px;
@@ -552,6 +553,7 @@
   align-items: center;
   width: 100%;
   margin: 30px 0px 0px 0px;
+  gap: 20px;
 }
 
 .reviews_form_layer{
@@ -563,6 +565,126 @@
     max-width: 1000px;
     width: 100%;
     display: flex;
+  }
+}
+
+@media (max-width: 979px){
+  .reviews_form_layer.reviews_form_layer span{
+    font-size: 25px;
+  }
+
+.step_title{
+  && span{
+    font-size: 18px!IMPORTANT;
+  }
+
+  && p{
+    font-size: 14px;
+  }
+}
+
+.reviews_form.reviews_form .reviews_form_title{
+  font-size: 20px;
+}
+
+.reviews_form.reviews_form p{
+  font-size: 16px;
+}
+
+.reviews_form.reviews_form .reviews_form_title_desc{
+  font-size: 14px;
+}
+
+.form_shield{
+  margin: 50px 0px 0px 0px;
+  padding: 30px 30px 30px 30px;
+}
+.shield_steps_layer{
+  margin: 0px 0px 0px 0px;
+}
+.shield_step_info{
+  && span{
+    font-size: 18px!IMPORTANT;
+    font-weight: 500;
+  }
+
+  && p{
+    font-size: 14px;
+  }
+}
+.shield_step{
+
+  && svg{
+    min-width: 15px;
+    min-height: 15px;
+  }
+}
+
+  .selection_analogue_layer{
+    margin: 50px 0px 50px 0px;
+  }
+
+  .analogue{
+    && span{
+      font-size: 20px!IMPORTANT;
+      margin: 0px 0px 15px 0px!IMPORTANT;
+    }
+
+    && desc{
+      font-size: 18px!IMPORTANT;
+    }
+    
+    && p{
+      font-size: 14px;
+    }
+  }
+
+  .selection_analogue{
+    && disc{
+      font-size: 20px!IMPORTANT;
+    }
+    && img{
+      right: -25%!IMPORTANT;
+    }
+  }
+  .selection_analogue.selection_analogue button{
+    z-index: 9;
+  }
+
+  .selection_analogue{
+    padding: 30px 30px 30px 30px;
+  }
+}
+
+@media (max-width: 679px){
+  .reviews_form_info_layer{
+    flex-direction: column;
+  }
+  .reviews_form{
+    max-width: 100%;
+    margin: 12px 0px 0px 0px;
+  }
+  .shield_steps_layer{
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .selection_analogue_two:first-child{
+    flex-direction: column;
+    gap: 12px;
+  }
+  .analogue{
+    width: 100%;
+    max-width: 100%;
+  }
+  .selection_analogue{
+    padding: 20px 20px 20px 20px;
+  }
+  .selection_analogue.selection_analogue img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    right: -25%;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <section class="df fd-c p-125-0 bc-white">
+  <section class="df fd-c p-125-0 bc-white certificates-page">
     <div class="content">
       <div class="certificate-title">
         <div class="df fd-c w-100">
@@ -20,7 +20,7 @@
 
       <div class="certificate-slider df jc-sb ai-c" style="max-width: 100%;float: left;">
         <SfScrollable
-    class="m-auto py-4 items-center w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+    class="m-auto py-4 items-center item-center-slider w-full [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
     buttons-placement="floating"
     drag
   >
@@ -39,7 +39,7 @@
     <div
       v-for="{ id, img } in products"
       :key="id"
-      class="first:ms-auto last:me-auto border border-neutral-200 shrink-0 rounded-md hover:shadow-lg"
+      class="first:ms-auto last:me-auto border border-neutral-200 shrink-0 rounded-md hover:shadow-lg certificate-image"
       style="width: 23.5%;"
     >
       <div class="relative">
@@ -97,56 +97,56 @@ const products = [
   {
     id: 0,
     img: {
-      src: 'knauf.svg',
+      src: '/knauf.svg',
       alt: 'knauf',
     }
   },
   {
     id: 1,
     img: {
-      src: 'bergauf.svg',
+      src: '/bergauf.svg',
       alt: 'bergauf',
     },
   },
   {
     id: 2,
     img: {
-      src: 'fasadpro.svg',
+      src: '/fasadpro.svg',
       alt: 'fasadpro',
     }
   },
   {
     id: 3,
     img: {
-      src: 'krovent.svg',
+      src: '/krovent.svg',
       alt: 'krovent',
     },
   },
   {
     id: 4,
     img: {
-      src: 'knauf.svg',
+      src: '/knauf.svg',
       alt: 'knauf',
     }
   },
   {
     id: 5,
     img: {
-      src: 'bergauf.svg',
+      src: '/bergauf.svg',
       alt: 'bergauf',
     },
   },
   {
     id: 6,
     img: {
-      src: 'fasadpro.svg',
+      src: '/fasadpro.svg',
       alt: 'fasadpro',
     }
   },
   {
     id: 7,
     img: {
-      src: 'krovent.svg',
+      src: '/krovent.svg',
       alt: 'krovent',
     },
   }
@@ -202,6 +202,86 @@ p{
   && p{
     font-size: 16px;
     font-weight: 500;
+  }
+}
+
+.item-center-slider{
+  width: calc(100% - 320px)!IMPORTANT;
+}
+
+@media (max-width: 979px){
+  h2{
+    font-size: 25px;
+  }
+  p{
+    font-size: 16px;
+  }
+  .slider-stats.slider-stats span{
+    font-size: 30px;
+  }
+  .slider-stats.slider-stats p{
+    font-size: 14px;
+  }
+  .certificate-image{
+    width: 30%;
+    min-width: 30%;
+  }
+
+  .slider-stats{
+    min-width: 279px;
+    margin: 0px 0px 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+  }
+
+  .cert_slide{
+    max-width: 350px;
+  }
+  .certificates-page{
+    padding: 50px 0px 35px 0px;
+  }
+  .certificate-slider{
+    flex-direction: column;
+    max-width: 98%!IMPORTANT;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .slider-stat{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+  }
+  .slider-stats{
+    margin: 0 auto;
+    gap: 35px;
+  }
+}
+
+@media (max-width: 679px){
+  .certificate-slider{
+    flex-direction: column;
+  }
+  .certificate-title{
+    flex-direction: column;
+    align-items: flex-start;
+
+    && button{
+      margin: 15px 0px 0px;
+    }
+  }
+  .slider-stats{
+    margin: 25px 0px 0px 0px;
+  }
+  .certificate-slider{
+    overflow: hidden;
+  }
+  .certificate-image{
+    min-width: 45%!IMPORTANT;
   }
 }
 </style>

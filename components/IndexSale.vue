@@ -33,6 +33,9 @@ const props = defineProps({
 </script>
 
 <style>
+  .indexSaleLayout.indexSaleLayout a{
+    z-index: 2;
+  }
 .indexSaleLayout{
   width: 100%;
   margin: 0px 15px 0px 0px;
@@ -64,12 +67,14 @@ const props = defineProps({
   && img{
     position: absolute;
     right: 0;
+    right: -12%;
+    bottom: 0%;
   }
 }
 
 .indexSaleInfo{
   z-index: 2;
-  width: 50%;
+  width: 67%;
   h2{
     font-size: 30px;
     font-weight: 700;
@@ -77,6 +82,78 @@ const props = defineProps({
   }
   && p{
     font-size: 15px;
+  }
+}
+
+
+@media (max-width: 979px){
+  .indexSaleInfo h2{
+    font-size: 20px;
+    z-index: 2;
+  }
+  .indexSaleInfo.indexSaleInfo p{
+    font-size: 14px;
+    z-index: 2;
+  }
+  .indexSaleLayout{
+    padding: 20px 20px 20px 20px;
+  }
+  .indexSaleInfo button{
+    z-index: ;
+  }
+  .indexSaleInfo{
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+  .allSalesButton{
+    padding: 20px 20px 20px 20px;
+  }
+  .indexSaleLayout.indexSaleLayout a{
+    z-index: 2;
+    font-size: 15px;
+    font-weight: 500;
+
+    svg{
+      margin: 0px 0px 0px 15px;
+    }
+  }
+  .indexSales{
+    height: max-content!IMPORTANT;
+  }
+  .indexSaleLayout.indexSaleLayout img{
+    bottom: -50%;
+    right: -50%;
+  }
+  .allSalesButton{
+    max-width: 108px!IMPORTANT;
+    width: 100%;
+    font-size: 20px!IMPORTANT;
+    padding: 20px 20px 20px 20px!IMPORTANT;
+  }
+}
+
+@media (max-width: 679px){
+  .indexSales{
+    flex-direction: column;
+  }
+
+  .indexSaleLayout{
+    margin: 12px 0px 0px 0px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .allSalesButton{
+    width: 100%!IMPORTANT;
+    max-width: 100%!IMPORTANT;
+    margin: 12px 0px 0px 0px;
+    flex-direction: row!IMPORTANT;
+    justify-content: center!IMPORTANT;
+    align-items: center!IMPORTANT;
+
+    && svg {
+      margin: 0px 15px 0px 0px;
+    }
   }
 }
 </style>

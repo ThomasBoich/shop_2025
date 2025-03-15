@@ -1,0 +1,17 @@
+http://localhost:3000/
+http://localhost:3000/catalog
+http://localhost:3000/catalog/категория
+http://localhost:3000/catalog/категория/подкатегория
+http://localhost:3000/catalog/кирпичи/подкатегория/товар
+http://localhost:3000/otzivi
+http://localhost:3000/documents
+http://localhost:3000/contacts
+http://localhost:3000/sales
+http://localhost:3000/sale
+http://localhost:3000/garantiya
+http://localhost:3000/faq
+http://localhost:3000/404
+http://localhost:3000/cart/nulllllllllll_cart
+http://localhost:3000/pay
+http://localhost:3000/delivery
+http://localhost:3000/profile/settings_fiz

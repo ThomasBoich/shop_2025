@@ -133,4 +133,36 @@ const products = Array.from(Array(10), (_, i) => ({
   .reviews_layer{
     padding: 125px 0px 125px 0px;
   }
+
+  @media (max-width: 979px){
+    .reviews_title.reviews_title span{
+      font-size: 25px;
+    }
+    .reviews_title{
+      width: 100%;
+      max-width: 100%;
+      flex-direction: column;
+      align-items: center;
+
+      div{
+        width: 100%;
+      }
+    }
+    .reviews_title.reviews_title span{
+      max-width: 100%;
+      width: 100%;
+    }
+    .reviews_layer{
+      padding: 50px 0px 50px 0px;
+    }
+    .review_card{
+      min-width: 40%!IMPORTANT;
+    }
+  }
+  
+  @media (max-width: 679px){
+    .review_card{
+      min-width: 90%!IMPORTANT;
+    }
+  }
 </style>

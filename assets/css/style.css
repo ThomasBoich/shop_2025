@@ -103,7 +103,12 @@ input{color: #272727;}
   max-width: 1320px;
   margin: 0 auto;
   width: calc(100% - 29px);
+  width: calc(99% - 29px);
 }
+
+ul{line-height: 1.5;}
+li{display: flex;align-items: center;}
+li svg{margin: 0px 10px 0px 0px;}
 
 .ai-c{align-items: center;}
 .fd-c{flex-direction: column;}
@@ -126,9 +131,76 @@ input{color: #272727;}
 .br-5{border-radius: 5px;}
 .pr{position: relative;}
 .pa{position: absolute;}
+.tc-c{text-align: center;}
+.bc-grey{background-color: #F0F0F0!IMPORTANT;color: #272727!IMPORTANT;}
+
+
+.p-accordionpanel {
+  display: flex;
+  flex-direction: column;
+  border-style: none!IMPORTANT;
+  border-width: inherit!IMPORTANT;
+  border-color: white!IMPORTANT;
+  border-bottom: 1px solid #27272740!IMPORTANT;
+}
+.p-accordioncontent-content {
+  border-style: none!IMPORTANT;
+  border-width: inherit!IMPORTANT;
+  border-color: #FFFFFF!IMPORTANT;
+  background-color: #FFFFFF!IMPORTANT;
+  color: inherit!IMPORTANT;
+  padding: inherit!IMPORTANT;
+}
+.p-accordioncontent-content{
+  border: none!IMPORTANT;
+  padding: 0!IMPORTANT;
+  outline: none!IMPORTANT;
+  border-style: none!IMPORTANT;
+  border-color: #FFFFFF!IMPORTANT;
+}
+.p-tabpanels{
+  border: none!IMPORTANT;
+  outline: none!IMPORTANT;
+  background-color: #FFFFFF!IMPORTANT;
+  background: #FFFFFF!IMPORTANT;
+  border-radius: 5px!IMPORTANT;
+  overflow: hidden!IMPORTANT;
+  border-style: none!IMPORTANT;
+  border-color: #FFFFFF!IMPORTANT;
+}
+.p-tabpanel{
+  border: none!IMPORTANT;
+  border-style: none!IMPORTANT;
+  border-color: #FFFFFF!IMPORTANT;
+}
+.p-accordionheader{
+  padding: 20px!IMPORTANT;
+  border: none!IMPORTANT;
+  border-style: none!IMPORTANT;
+  border-color: #FFFFFF!IMPORTANT;
+}
+.p-accordioncontent-content{
+  border: none!IMPORTANT;
+  padding: 10px!IMPORTANT;
+  border-style: none!IMPORTANT;
+  border-color: #FFFFFF!IMPORTANT;
+
+  && p{
+    border: none!IMPORTANT;
+    padding: 20px!IMPORTANT;
+    border-style: none!IMPORTANT;
+    border-color: #FFFFFF!IMPORTANT;
+  }
+}
+.p-accordionpanel:not(.p-disabled).p-accordionpanel-active > .p-accordionheader{
+  color: #FFFFFF!IMPORTANT;
+  background-color: #272727!IMPORTANT;
+  border: none!IMPORTANT;
+}
 
 .button{height: 50px;display: flex;width: 100%;color: #FFFFFF;background-color: #CE2E41;border-radius: 5px;justify-content: center;align-items: center;font-size: 15px;}
-.button svg{margin: 0px 10px 0px 0px;}
+.button svg{margin: 0px 10px 0px 0px;min-width: max-content;}
+.title{padding: 25px 0px 25px 0px;font-size: 40px;color: #272727;font-weight: 700;}
 .m-carousel__header__actions{
   width: 115%!IMPORTANT;  
   justify-content: space-between!IMPORTANT;

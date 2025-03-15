@@ -3,6 +3,23 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
+  ssr: true,
+  // build: {
+  //   transpile: ['vite-svg-loader'],
+  // },
+  // vite: {
+  //   plugins: [
+  //     // другие плагины
+  //     require('vite-svg-loader')(),
+  //   ],
+  //   server: {
+  //     // Отключить предупреждения
+  //     strictPort: false,
+  //     watch: {
+  //       usePolling: true,
+  //     },
+  //   },
+  // },
   css: [
     '@/assets/css/stylesheet.css',
     '@/assets/css/style.css',
