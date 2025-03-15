@@ -23,7 +23,58 @@
 
         </div>
       </section>
+      <section>
+        <h2>Компания</h2>
+        <div>
+          <label for="">Название компании</label>
+          <input type="text" value="ООО Изобилие">
+        </div>
+        <div>
+          <label for="">КПП</label>
+          <input type="text" value="5645645646">
+        </div>
+        <div>
+          <label for="">ИНН компании</label>
+          <input type="text" value="5645645646">
+        </div>
+        <div>
+          <label for="">ОГРН</label>
+          <input type="text" value="5645645646">
+        </div>
+        <div style="width: 100%;">
+          <label for="">Юр. адрес компании</label>
+          <input type="text" class="w100" value="214018, РОССИЯ, СМОЛЕНСКАЯ ОБЛ,  Г СМОЛЕНСК, ПР-КТ ГАГАРИНА, Д 26, пом. 25">
+        </div>
+        <div>
 
+        </div>
+      </section>
+      <section>
+        <h2>Банковские реквизиты</h2>
+        <div>
+          <label for="">Расчетный счет</label>
+          <input type="text" value="40702810810000369733">
+        </div>
+        <div>
+          <label for="">Банк</label>
+          <input type="text" value="ТБанк">
+        </div>
+        <div>
+          <label for="">ИНН банка</label>
+          <input type="text" value="5645645646">
+        </div>
+        <div>
+          <label for="">Бик банка</label>
+          <input type="text" value="40702810810000369733">
+        </div>
+        <div style="width: 100%;">
+          <label for="">Корреспондентский счет банка</label>
+          <input type="text" class="w100" value="40702810810000369733">
+        </div>
+        <div>
+
+        </div>
+      </section>
 
       <div class="profile_form_button">
         <button class="profile_exit_button">
@@ -50,7 +101,7 @@
 
 <script lang="ts" setup>
 definePageMeta({
-  layout: 'profile'
+  layout: 'profile',
 })
 
 const props = defineProps({
@@ -107,6 +158,14 @@ const props = defineProps({
       font-size: 29px;
       margin: 0px 0px 20px 0px;
     }
+  }
+
+  && section{
+    margin: 0px 0px 40px 0px;
+  }
+
+  && section:last-child{
+    margin: 0px 0px 0px 0px!IMPORTANT;
   }
 }
 

@@ -7,6 +7,7 @@
         <div class="profile_menu">
           <ul>
             <li><NuxtLink to="settings_fiz"  exact-active-class="active">Настройка профиля</NuxtLink></li>
+            <li><NuxtLink to="settings_profile_ul"  exact-active-class="active">Настройка профиля юл</NuxtLink></li>
             <li><NuxtLink to="orders"  exact-active-class="active">Заказы</NuxtLink></li>
           </ul>
         </div>
@@ -37,7 +38,7 @@ const props = defineProps({
 
 <style scoped>
 .profile_layout{
-  margin: 20px auto auto auto;
+  margin: 20px auto 125px auto;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -64,5 +65,33 @@ const props = defineProps({
   border-radius: 5px;
   background-color: #FFFFFF;
   padding: 20px 20px 20px 20px;
+}
+
+@media (max-width: 979px){
+  .profile_layout{
+    flex-direction: column;
+  }
+  .profile_menu{
+    width: 100%;
+
+    && ul{
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      width: 100%;
+
+      li{
+        width: 50%;
+      }
+
+      a{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 0.9;
+      }
+    }
+  }
 }
 </style>

@@ -15,3 +15,5 @@ http://localhost:3000/cart/nulllllllllll_cart
 http://localhost:3000/pay
 http://localhost:3000/delivery
 http://localhost:3000/profile/settings_fiz
+http://localhost:3000/profile/settings_profile_ul
+http://localhost:3000/profile/orders
