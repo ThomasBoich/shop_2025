@@ -1,6 +1,15 @@
 // import Aura from '@primevue/themes/aura';
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Nuxt App',
+      lang: 'ru',
+      meta: [
+        { name: 'description', content: 'Everything about Nuxt 3' }
+      ],
+    },
+  },
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
   ssr: true,

@@ -1,9 +1,13 @@
 <template>
-  <div>
-    <Navbar></Navbar>
+  <Navbar></Navbar>
+  <main>
+  <!-- <div> -->
+    
     <slot />
-    <Footer></Footer>
-  </div>
+    
+  <!-- </div> -->
+  </main>
+  <Footer></Footer>
 </template>
 
 <script lang="ts" setup>

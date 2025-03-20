@@ -8,7 +8,7 @@
         <span @click="hitsSalesActiveFunction" :class="{'active': hitsSalesActive}">Распродажа</span>
       </div>
 
-      <Tabs value="0" v-if="hitsTitlesActive">
+      <Tabs value="0" v-if="hitsTitlesActive" class="index_hits_layer_top">
         <TabList>
             <Tab value="0">Все</Tab>
             <Tab value="1">Утеплитель</Tab>
@@ -232,12 +232,23 @@ const products = Array.from(Array(10), (_, i) => ({
 </script>
 
 <style>
+@media (min-width: 979px){
+  .item_preview{
+  top: 35%;
+  z-index: 999;
+}
+.item_next{
+  top: 35%;
+  z-index: 999;  
+}
+}
+
 /* хиты продаж */
 .hitsLayer{
   width: 100%;
   background-color: #FFFFFF;
-  margin: 0px 0px 125px 0px;
-  padding: 100px 0px;
+  margin: 0px 0px 0px 0px;
+  padding: 100px 0px 0px 0px;
 }
 /* хиты продаж */
 

@@ -329,14 +329,13 @@
   position: relative;
 }
 
-
 .betst_сonditions{
   width: calc(100% - 29px);
   max-width: 1320px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-
+ 
   && div{
     display: flex;
     height: max-content;
@@ -345,6 +344,12 @@
 
   && svg{
     margin: 0px 10px 0px 0px;
+  }
+}
+
+@media (min-width: 979px){
+  .betst_сonditions{
+    padding: 100px 0px 0px 0px;
   }
 }
 

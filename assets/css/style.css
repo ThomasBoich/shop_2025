@@ -168,6 +168,25 @@ li svg{margin: 0px 10px 0px 0px;}
   border-style: none!IMPORTANT;
   border-color: #FFFFFF!IMPORTANT;
 }
+
+
+
+.index_hits_layer_top .p-tabpanels {
+  overflow:visible!IMPORTANT;
+}
+@media (min-width: 979px){
+  .index_hits_layer_top .p-tabpanels {
+    overflow:visible!IMPORTANT;
+  }
+  .index_hits_layer_top .product-cart{
+    top: 0px!IMPORTANT;
+  }
+  .index_hits_layer_top article{
+    top: 0px!IMPORTANT;
+  }
+  .index_hits_layer_top .w-full{align-items: flex-start!IMPORTANT;min-height: 700px;}
+}
+
 .p-tabpanel{
   border: none!IMPORTANT;
   border-style: none!IMPORTANT;

@@ -1,13 +1,15 @@
 <template>
-  <div>
+  <!-- <div></div> -->
     <Navbar></Navbar>
+    <main>
     <slot />
     <!-- <IndexInfoProducts></IndexInfoProducts> -->
     <!-- <IndexTrends></IndexTrends> -->
     <!-- <IndexGiveLead></IndexGiveLead> -->
     <!-- <IndexLoremIpsum></IndexLoremIpsum> -->
+  </main>
     <Footer></Footer>
-  </div>
+  
 </template>
 
 <script lang="ts" setup>

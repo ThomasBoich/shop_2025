@@ -105,7 +105,7 @@
             Получить КП со сметой
           </NuxtLink>
         </div>
-
+        <div class="cart_item_exit_button" @click="toogleItemMobileButton">X</div>
       </div>
 
 
@@ -314,15 +314,25 @@ const buyProduct = () => {
   outline: 2px solid #CE2E41;
 }
 
-article{
+
+
+
+/* article:hover{
+
+
+} */
+
+
+@media (min-width: 979px){
+
+  article{
   width: 100%;
   position: relative;
   height: 100%;
   display: flex;
   align-items: flex-start;
 }
-
-article:hover{
+  article:hover{
   cursor: pointer;
   width: 100%;
   box-sizing: border-box;
@@ -331,11 +341,7 @@ article:hover{
   display: flex;
   align-items: flex-start;
 }
-/* article:hover{
-
-
-} */
-.product-cart:hover{
+  .product-cart:hover{
     position: absolute;
     width: 100%;
     z-index: 115;
@@ -344,7 +350,7 @@ article:hover{
     overflow: hidden;
   }
 
-.item_pay_action{
+  .item_pay_action{
   display: none;
 }
 
@@ -355,13 +361,13 @@ article:hover .item_pay_action{
 .product-cart:hover .item_color_list{
   visibility: visible;
   display: flex;
-  
 }
 
 .product-cart:hover{
   && button{
     display: none;
   }
+}
 }
 
 .product-cart{
@@ -499,13 +505,17 @@ button{
   box-shadow: none
 }
 
+.cart_item_exit_button{
+  display: none;
+}
+
 @media (max-width: 1320px){
   .item_pay_action{
     flex-wrap: wrap;
   }
 }
 
-@media (max-width: 969px){
+@media (max-width: 979px){
   .item_price button{
     display: flex!IMPORTANT;
   }
@@ -513,29 +523,67 @@ button{
     display: flex!IMPORTANT;
   } */
 
-  article:hover{
-  .product-cart{
-  position: relative;
-  width: 100%;
-  z-index: 115;
-  background-color: #FFFFFF;
-  box-shadow: none
-}
-
-button{
-    display: flex!IMPORTANT;
+  .mobile_item_button{
+    display: none!IMPORTANT;
   }
+    /* article:hover{
+    .product-cart{
+    position: relative;
+    width: 100%;
+    z-index: 115;
+    background-color: #FFFFFF;
+    box-shadow: none
   }
 
+  button{
+      display: flex!IMPORTANT;
+    }
+    } */
+
+    .product-cart:hover{
+      && button{
+        display: flex;
+      }
+    }
+  .item_pay_action{
+      display: none;
+    }
+  .item_info_link{
+    display: none;
+  }
   .item_actions.active{
   position: fixed;
-  bottom: 0px;
-  box-shadow:-20px 0px 20px 0px #00000020!IMPORTANT;
+  bottom: 60px;
+  box-shadow:0px -15px 25px 0px #00000020!IMPORTANT;
   width: 100%;
   left: 0;
   right: 0;
-  padding: 20px 20px;
+  padding: 50px 20px 20px 20px;
+  height: 70dvh;
+  z-index: 9999;
+
+  && button{display: none;}
+  }
+  .active .item_pay_action{
+    display: flex;
+  }
+  .active .item_info_link{
+    display: flex;
+    flex-direction: column;
+  }
+ .active .item_color_list{
+  visibility: visible;
+  display: flex;
+} 
+.active .item_count.item_count input{left: 0px;}
 }
 
+.active .cart_item_exit_button{
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  cursor: pointer;
+  font-size: 25px;
+  display: flex;
 }
 </style>

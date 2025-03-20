@@ -1115,6 +1115,7 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 @media (max-width: 979px){
+  .showAll{display: flex;}
   .help_contacts_links{
     display: flex;
     gap: 10px;

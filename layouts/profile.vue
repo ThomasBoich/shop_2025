@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <!-- <div></div> -->
     <Navbar></Navbar>
+    <main>
     <BreadCrabms></BreadCrabms>
     <div class="content">
       <div class="profile_layout">
@@ -19,8 +20,9 @@
         </div>
       </div>
     </div>
+  </main>
     <Footer></Footer>
-  </div>
+  
 </template>
 
 <script lang="ts" setup>

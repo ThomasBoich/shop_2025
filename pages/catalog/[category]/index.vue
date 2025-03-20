@@ -763,6 +763,7 @@ input[type="range"]::-moz-range-thumb {
     height: 50px;
     font-weight: 500;
     font-size: 15px!IMPORTANT;
+    display: none;
 
     && svg{
       margin: 0px 0px 0px 10px;
@@ -857,6 +858,7 @@ input[type="range"]::-moz-range-thumb {
   }
 }
 @media (max-width: 979px){
+  .showAll{display: flex;}
   .scope_application_layout a:nth-child(n+7) {
     display: none;
   }

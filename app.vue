@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <!-- <div></div> -->
     <NuxtLayout>
       <NuxtPage></NuxtPage>
 
     </NuxtLayout>
-  </div>
 </template>
 <script setup>
 const allItemsButtonOpen = ref(false)
