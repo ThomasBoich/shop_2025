@@ -1,7 +1,116 @@
 <template>
   <!-- <div> -->
     <header>
+      <button @click="toogle_auth_form"style="z-index: 9;position: fixed;right: 25px;top: 15px;">X</button>
       <nav>
+        <div class="auth_form" :class="{'active': auth_form}">
+          <div class="auth_form_layer">
+
+            <span class="auth_cl" @click="toogle_auth_form">X</span>
+            <h1>Вход или регистрация</h1>
+
+            <div class="auth_btns">
+              <button @click="toogle_form_fl" :class="{'active': form_fl}">Физическое лицо</button>
+              <button @click="toogle_form_ul" :class="{'active': form_ul}">Юридическое лицо</button>
+            </div>
+
+            <form action="" class="form_ul" v-if="form_ul">
+              <p>Введите данные для входа</p>
+              <input type="text" placeholder="Email *">
+              <input type="password" name="" id="" placeholder="Пароль *">
+              <button class="button">Войти
+                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 10.59L7.58 6L3 1.41L4.41 0L10.41 6L4.41 12L3 10.59Z" fill="white"/>
+                </svg>
+              </button>
+              <label for="">
+                <input type="checkbox" checked>
+                Нажимая на кнопку, вы соглашаетесь с Пользовательским соглашением
+              </label>
+              <NuxtLink to="">Напомнить пароль</NuxtLink>
+              <NuxtLink to="" @click="toogle_form_regu">Нет аккаунта? Зарегистрироваться</NuxtLink>
+              <form action="">
+
+              </form>
+
+              
+            </form>
+            <div class="form_ul_regi" v-if="form_reg">
+                <form action="">
+                  <input type="text" placeholder="Телефон *">
+                  <input type="text" placeholder="Email *">
+                  <input type="text" placeholder="Название компании">
+                  <input type="text" placeholder="ИНН компании">
+                  <input type="password" name="" id="" placeholder="Пароль *">
+                  <input type="password" name="" id="" placeholder="Повторите пароль *">
+                  <button class="button">Зарегистрироваться
+                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.5 10.59L8.08 6L3.5 1.41L4.91 0L10.91 6L4.91 12L3.5 10.59Z" fill="white"/>
+                    </svg>
+                  </button>
+                  <label for="">
+                    <input type="checkbox" checked>
+                    Нажимая на кнопку, вы соглашаетесь с Пользовательским соглашением
+                  </label>
+                  <p>
+              Будет создан личный кабинет. Сможете следить
+              за историей заказов и получать бонусы за покупки
+            </p>
+                </form>
+              </div>
+          <form action="" class="form_fl" v-if="form_fl">
+            <!-- <span class="auth_cl">X</span> -->
+            <p>
+              Авторизируйтесь или войдите через номер телефона — 
+              мы отправим код подтверждения в смс
+            </p>
+            <input type="text" placeholder="Ваш телефон *">
+            <button class="button">Войти 
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 10.59L7.58 6L3 1.41L4.41 0L10.41 6L4.41 12L3 10.59Z" fill="white"/>
+              </svg>
+            </button>
+            <label for="">
+              <input type="checkbox" checked>
+              Нажимая на кнопку, вы соглашаетесь с Пользовательским соглашением
+            </label>
+            <p>
+              Будет создан личный кабинет. Сможете следить
+              за историей заказов и получать бонусы за покупки
+            </p>
+            <hr>
+            <div class="auth_social">
+              <p>Или войдите через сервисы</p>
+              <span>
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="50" height="50" rx="5" fill="#FC3F1D"/>
+                <path d="M28.6508 37H32.7847V13H26.771C20.7243 13 17.5463 16.1426 17.5463 20.7694C17.5463 24.4648 19.2887 26.64 22.3984 28.8851L17 37H21.4754L27.4892 27.9176L25.4045 26.5026C22.8764 24.775 21.6465 23.4291 21.6465 20.5283C21.6465 17.9723 23.4235 16.2463 26.8055 16.2463H28.6508V37Z" fill="white"/>
+                </svg>
+
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="50" height="50" rx="5" fill="#0077FF"/>
+                <path d="M26.6165 32.4583C18.0749 32.4583 13.203 26.6557 13 17H17.2786C17.4191 24.087 20.5733 27.0889 23.0717 27.7079V17H27.1006V23.1121C29.5678 22.8491 32.1596 20.0638 33.0341 17H37.0629C36.3915 20.7756 33.5807 23.5609 31.582 24.7059C33.5807 25.6343 36.782 28.0637 38 32.4583H33.5651C32.6126 29.5183 30.2393 27.2436 27.1006 26.9341V32.4583H26.6165Z" fill="white"/>
+                </svg>
+
+                <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="50" height="50" rx="5" fill="#272727"/>
+                <path d="M8 16H26.78V25.445C26.78 27.8663 25.4883 30.1037 23.3916 31.3144L17.39 34.78L11.3885 31.3144C9.29166 30.1037 8 27.8663 8 25.445V16Z" fill="#FFDD2D"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1562 20.9712V23.9088C13.558 23.4552 14.2883 23.1482 15.1234 23.1482H16.0309V26.5631C16.0309 27.4716 15.784 28.2668 15.4178 28.7042H19.3652C18.9997 28.2664 18.7534 27.4722 18.7534 26.5648V23.1482H19.661C20.496 23.1482 21.2264 23.4552 21.6281 23.9088V20.9712H13.1562Z" fill="#333333"/>
+                <path d="M38.6782 21.417C40.0252 21.417 41.0808 21.7726 41.845 22.4839C42.6169 23.1877 43.0028 24.1563 43.0028 25.3897C43.0028 26.6231 42.6169 27.5955 41.845 28.3068C41.0732 29.0105 40.0176 29.3624 38.6782 29.3624H35.9654V21.417H38.6782ZM38.6896 23.3466H38.1221V27.4328H38.6896C39.3176 27.4328 39.8133 27.2587 40.1765 26.9107C40.5473 26.5626 40.7327 26.0556 40.7327 25.3897C40.7327 24.7238 40.5473 24.2168 40.1765 23.8687C39.8133 23.5206 39.3176 23.3466 38.6896 23.3466Z" fill="white"/>
+                <path d="M34.7191 21.417V29.3624H32.5625V21.417H34.7191Z" fill="white"/>
+                </svg>
+
+              </span>
+            </div>
+            <!-- <h1>Вход или регистрация</h1>
+            <div class="auth_btns">
+              <button>Физическое лицо</button>
+              <button>Юридическое лицо</button>
+            </div> -->
+          </form>
+          </div>
+
+        </div>
       <MobileMenu ref="mobileMenuRef"></MobileMenu>
 
       <div class="items_all_layer_index" :class="{'active': allItemsButtonOpen}">
@@ -290,6 +399,40 @@
 </template>
 
 <script lang="ts" setup>
+const form_reg = ref(false)
+const auth_form = ref(false)
+const form_fl = ref(true)
+const form_ul = ref(false)
+
+
+function toogle_form_regu(){
+  form_reg.value = true
+  form_ul.value = false
+  form_fl.value = false
+}
+
+function toogle_auth_form(){
+  auth_form.value = !auth_form.value
+}
+function toogle_form_fl(){
+  if (form_fl.value == true){
+    return
+  } else {
+    form_fl.value = true
+    form_ul.value = false
+    form_reg.value = false
+  }
+}
+
+function toogle_form_ul(){
+  if (form_ul.value == true){
+    return
+  } else {
+    form_fl.value = false
+    form_ul.value = true
+    form_reg.value = false
+  }
+}
 
 const NavCart = ref(false)
 function ToogleNavCart(){
@@ -397,6 +540,133 @@ function clearHideTimeout() {
 </script>
 
 <style scoped>
+.auth_form{
+  background-color: #27272740;
+  width: 100%;
+  height: 100dvh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  transition: visibility 0.5s;
+  -webkit-transition: visibility 0.5s;
+  -moz-transition: visibility 0.5s;
+  flex-direction: column;
+  opacity: 0;
+  
+  && form{
+    /* background-color: #FFFFFF;
+    border-radius:5px;
+    padding: 40px 40px 40px 40px;
+    max-width: 536px;
+    width: 90%;
+    
+    
+    
+    box-shadow: 0px 0px;
+    position: relative; */
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    
+    h1{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    input{
+      width: 100%;
+      padding: 15px 25px 15px 25px;
+      border-radius: 5px;
+      border: 1px solid #E0E0E0;
+      font-size: 16px;
+      font-weight: 400;
+      outline: none;
+    }
+    button{
+      width: 1;
+      padding: 15px 25px 15px 25px;
+      border-radius: 5px;
+      border: 1px solid #E0E0E0;
+      font-size: 16px;
+      font-weight: 400;
+      gap: 9px;
+      display: flex;
+    }
+    label{
+      display: flex;
+      align-items: flex-start;
+      font-size: 12px;
+      color: #959595;
+
+      input{
+        height: 15px;
+        width: 15px;
+        margin: 0px 9px 0px 0px;
+      }
+    }
+  }
+  && h1{
+      font-size: 30px;
+      font-weight: 700;
+    }
+}
+.auth_form.active{visibility: visible;opacity: 9;}
+.auth_social{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.auth_social span{
+  display: flex;
+  gap: 9px;
+  
+  svg{cursor: pointer;}
+}
+.auth_form_layer{
+  background-color: #FFFFFF;
+  border-radius:5px;
+  padding: 40px 40px 40px 40px;
+  max-width: 536px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0px 0px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.auth_cl{
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.auth_btns{
+  width: 100%;
+  display: flex;
+  gap: 10px;
+
+  && button{
+    width: 100%;
+    padding: 20px 25px 20px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #F0F0F0;
+  }
+  && button.active{background-color: #272727;color: #FFFFFF;}
+.auth_btns .auth_btns_active{
+  background-color: #272727;
+  }
+}
 .nav_cart_items_info{
   width: max-content;
   background-color: #FFFFFF;
@@ -443,6 +713,12 @@ function clearHideTimeout() {
   }
   && button{
     margin: 20px 0px 0px 0px;
+  }
+}
+.form_ul{
+  && a{
+    color: #CE2E41;
+    text-decoration: underline;
   }
 }
 .nav_cart_items_info.active{
@@ -966,5 +1242,29 @@ navig button.active {
         padding: 5px 0px 5px 0px;
         font-size: 13px;
     }
+}
+
+@media (max-width: 479px){
+  .auth_form.auth_form h1{
+    font-size: 22px;
+  }
+.auth_btns.auth_btns button{
+  font-size: 15px;
+  padding: 9px 15px 9px 15px;
+}
+  .auth_btns{
+    /* flex-direction: column; */
+  }
+
+  .auth_social{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .auth_form_layer{
+    overflow-y: auto;
+  }
+  .auth_form_layer{
+    padding: 40px 20px 40px 20px;
+  }
 }
 </style>
